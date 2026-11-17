@@ -145,11 +145,11 @@ The crucial structure is shared across all pairs: the displacement vector is one
 
 ## 4. Concentrate the correlation and retain the other outputs
 
-For $`z=(z_1,\ldots,z_N)\ne0`$, choose a passive combiner with first row $`w_j=z_j/\|z\|`$. Its first displacement is
+For $`z=(z_1,\ldots,z_N)\ne0`$, choose a passive combiner with first row $`w_j=z_j/\Vertz\Vert`$. Its first displacement is
 
 ```math
 \sum_{j=1}^N w_jd_j
-=e^{i\theta}\frac{c\|z\|}{V}.
+=e^{i\theta}\frac{c\Vertz\Vert}{V}.
 ```
 
 All orthogonal outputs have zero displacement in the ideal construction. Because every conditional thermal covariance is the same, passive mixing leaves a product thermal covariance. There is one displaced thermal bright output and $`N-1`$ undisplaced thermal outputs of residual occupation $`e`$.
@@ -231,14 +231,14 @@ In the regime
 ```math
 n=10^{-3},\qquad B=10,\qquad
 \eta\in[0.9,1],\qquad \nu\in[0,10^{-3}],\qquad
-0<\kappa\le0.1,
+0\lt \kappa\le0.1,
 ```
 
 the ideal collective rule has an explicit positive rate $`r`$ such that, for $`N\ge20`$,
 
 ```math
 R_N\le\frac32e^{-Nr},\qquad
-r>2.2\,\kappa nC_B,\qquad
+r\gt 2.2\,\kappa nC_B,\qquad
 C_B=(\sqrt{B+1}-\sqrt B)^2.
 ```
 
@@ -248,9 +248,9 @@ The comparator is unusually strong: fixed mixtures of coherent signals at the sa
 
 | Supported receiver variant | Certified transmitted-energy rate comparison | Limit and resource qualification |
 | --- | --- | --- |
-| Ideal collective block | $`r>2.2\kappa nC_B`$ | Increasing coherent block size, exact declared optical model |
-| Finite return range and passive commands, exact integer decision | $`c_d>2.17\kappa nC_B`$ | Known rational $`\kappa`$; exceptional return records are charged; ideal heterodyne and modeled photon-count response remain assumptions |
-| Repeated fixed-width apparatus | Rate $`>1.05\kappa nC_B`$ | $`J\to\infty`$ at fixed $`L=\lceil2\times10^6/\kappa\rceil`$ modes per block; width is twenty million at $`\kappa=0.1`$ |
+| Ideal collective block | $`r\gt 2.2\kappa nC_B`$ | Increasing coherent block size, exact declared optical model |
+| Finite return range and passive commands, exact integer decision | $`c_d\gt 2.17\kappa nC_B`$ | Known rational $`\kappa`$; exceptional return records are charged; ideal heterodyne and modeled photon-count response remain assumptions |
+| Repeated fixed-width apparatus | Rate $`\gt 1.05\kappa nC_B`$ | $`J\to\infty`$ at fixed $`L=\lceil2\times10^6/\kappa\rceil`$ modes per block; width is twenty million at $`\kappa=0.1`$ |
 
 The finite-control constants and the fixed-width rate belong to distinct constructions. The fixed-width result does not inherit the factor $`2.2`$, and its factor $`1.05`$ does not certify an advantage after charging equal-frequency source idlers as well as signals. The [processing proof](../science/processing_robustness.md) states the exact bounds and limiting orders.
 

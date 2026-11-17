@@ -4,7 +4,7 @@
 
 The quantum receiver uses no supplied target phase and makes no phase estimate. The comparison below gives a classical transmitter's receiver the true phase and arbitrary collective reception. It also permits arbitrary randomization of signal energy subject only to its mean. The resulting ceiling is therefore a deliberately favorable classical benchmark.
 
-Natural logarithms are used. The channel and matched background are those of [the model](model.md), with $`n,B>0`$ and $`0\lt \kappa\lt 1`$.
+Natural logarithms are used. The channel and matched background are those of [the model](model.md), with $`n,B\gt 0`$ and $`0\lt \kappa\lt 1`$.
 
 This theorem and proof are inherited from [Quantum-Illumination-Feedback](https://github.com/GoGoKo699/Quantum-Illumination-Feedback/blob/2b47472b7930168b5aab53f040c6730a4bbb4cf9/science/classical_limit.md), with notation and reader routes adapted. They are included to make the benchmark self-contained; this is not a new classical converse. The MIT license and original copyright are retained.
 
@@ -129,7 +129,7 @@ r_{ij}=\frac{\sqrt{p_{ij}q_{ij}}}{Z_x(1/2)},
 \qquad L_{ij}=\log\frac{p_{ij}}{q_{ij}}.
 ```
 
-Zero-overlap terms have zero weight. Because $`B>0`$, both thermal states have full support. The moment-generating function of $`L`$ is $`Z_x(1/2+t)/Z_x(1/2)`$, finite for $`|t|\lt 1/2`$. Differentiation and symmetry around $`1/2`$ therefore give
+Zero-overlap terms have zero weight. Because $`B\gt 0`$, both thermal states have full support. The moment-generating function of $`L`$ is $`Z_x(1/2+t)/Z_x(1/2)`$, finite for $`|t|\lt 1/2`$. Differentiation and symmetry around $`1/2`$ therefore give
 
 ```math
 \mathbb E_rL=0,

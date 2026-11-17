@@ -13,13 +13,13 @@ The explicit separation regime is
 ```math
 n=10^{-3},\qquad B=10,\qquad
 \eta\in[0.9,1],\qquad \nu\in[0,10^{-3}],\qquad
-0<\kappa\le0.1.
+0\lt \kappa\le0.1.
 ```
 
 | Result | What is established |
 |---|---|
 | Exact internal reference | The total idler count has the same negative-binomial law under both target hypotheses. Conditioning on this total removes unknown memory brightness from the null bright-count law. |
-| Finite-sample detection | For $`N\ge20`$, an explicit test has worst-case symmetric risk $`R_N\le(3/2)e^{-Nr}`$, with $`r>2.2\kappa nC_B`$ and $`C_B=(\sqrt{B+1}-\sqrt B)^2`$. Every return and reference record is included. |
+| Finite-sample detection | For $`N\ge20`$, an explicit test has worst-case symmetric risk $`R_N\le(3/2)e^{-Nr}`$, with $`r\gt 2.2\kappa nC_B`$ and $`C_B=(\sqrt{B+1}-\sqrt B)^2`$. Every return and reference record is included. |
 | Finite controls and exact arithmetic | A bounded-range return record, rounded passive commands and an integer-only decision retain a certified rate greater than $`2.17\kappa nC_B`$, with the exceptional-record probabilities charged. |
 | Fixed coherent width | Repeating blocks of $`L=\lceil2\times10^6/\kappa\rceil`$ modes gives a rate greater than $`1.05\kappa nC_B`$ as the number of blocks grows. The very large width is explicit. |
 | Calibration obstruction | Two positive added-noise channels have a common channel component. Arbitrary adaptive quantum calibration retains exponentially significant ambiguity after $`K`$ calls, independently of probe energy. A specified confounded one-output receiver has zero uniform detection exponent when $`K=o(N)`$. |
