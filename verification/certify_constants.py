@@ -46,6 +46,7 @@ def verify():
     dyadic_ratio_lower=F(693,1000)*41976/13400
     assert dyadic_ratio_lower>F(217,100)
     assert F(694,1000)/13400<F(109,50)/42000
+    assert exp_upper(2*F(694,1000)/F(144,25),20)<F(13,10)
     # r < 1e-5; the norm and total-count exceptional events have larger rates.
     assert F(693,1000)-F(1,2)>F(19,100)
     assert 1-F(694,1000)>F(19,100)

@@ -155,7 +155,7 @@ The normalized squared return norm has a Gamma distribution of shape $`N`$. The 
 \tag{P12}
 ```
 
-Use a uniform real-coordinate grid of spacing $`h=10^{-3}`$ and range $`[-\sqrt{2Nv_+},\sqrt{2Nv_+}]`$, with an overflow flag. On $`\mathcal G_N`$ there is no overflow. If $`\widetilde z`$ is the rounded vector, its relative error obeys
+Use a uniform real-coordinate grid of spacing $`h=10^{-3}`$. Put $`R=\sqrt{2Nv_+}`$ and retain the codes $`kh`$ with $`|k|\le\lceil R/h\rceil`$, so the actual range is $`[-R_h,R_h]`$, where $`R_h=h\lceil R/h\rceil<R+h`$. Flag values outside that actual range. On $`\mathcal G_N`$ there is no overflow, and nearest-code rounding has error at most $`h/2`$ in every real coordinate. If $`\widetilde z`$ is the rounded vector, its relative error obeys
 
 ```math
 \varepsilon
@@ -276,7 +276,7 @@ C_B=(\sqrt{B+1}-\sqrt B)^2.
 
 Use $`L`$ modes per block and the preceding finite-range, finite-control receiver with exact dyadic decisions. Equation (P21) implies that each type of error is at most $`\delta=5e^{-Lc_d}<1/2`$. Here $`L\ge2\times10^7`$ and $`Lc_d>100`$, so the displayed bound is well inside $`1/2`$.
 
-Run $`J`$ independent blocks using the same stationary full-window memory, and decide by majority vote, with any fixed tie rule. Their errors are independent under each hypothesis, and the phase does not enter their count laws. The binomial Chernoff bound gives
+Run $`J`$ independent blocks using the same stationary full-window memory, and declare presence when more than half the block decisions declare presence, with any fixed tie rule. Their errors are independent under each hypothesis, and the phase does not enter their count laws. The binomial Chernoff bound gives
 
 ```math
 R_{J,L}\le
