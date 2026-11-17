@@ -125,8 +125,9 @@ H_0&\mathrm{Geom}(m)&\mathrm{NB}(N-1,m)\\[2pt]
 H_1&\displaystyle\mathbb E_1[t^K]=\frac{d_e(t)^{N-1}}{d_m(t)^N}
 &\mathrm{NB}(N-1,e).
 \end{array}
-\qquad K\perp S.
 ```
+
+Under either hypothesis, $`K`$ and $`S`$ are independent.
 
 Equivalently, the joint generating function under presence is
 

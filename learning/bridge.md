@@ -172,8 +172,10 @@ Under presence, the bright displacement depends on the random return norm. That 
 
 ```math
 \mathbb E_1[t^K]=\frac{d_e(t)^{N-1}}{d_m(t)^N},
-\qquad S\sim\mathrm{NB}(N-1,e),\qquad K\perp S.
+\qquad S\sim\mathrm{NB}(N-1,e).
 ```
+
+Here $`K`$ and $`S`$ are independent.
 
 Multiplying the generating functions gives a particularly useful cancellation:
 
