@@ -1,0 +1,33 @@
+# Quantum Illumination Memory Calibration
+
+Question: can quantum target detection remain reliable when stationary idler
+attenuation and added noise are unknown and calibration resources are counted?
+
+Read README.md for the supported results and scope. Follow science/README.md
+for the connected scientific account.
+
+Routes:
+- Model, common nuisance parameters and early identifiability: science/model.md
+- Optical conditional state, exact count law, total-photon reference, finite-N
+  detector and strong-classical separation: science/conditional_detection.md
+- Finite controls, full-window common Gaussian noise and coherent-width limits:
+  science/processing_robustness.md
+- Arbitrary-energy calibration obstruction and restricted allocation law:
+  science/calibration_limits.md
+- Mean-energy coherent-mixture converse with a phase-informed global receiver:
+  science/classical_benchmark.md
+- Signal, idler, calibration, pump, local oscillator, storage, measurement and
+  classical-processing costs: science/resources.md
+- Receiver inheritance and closest primary comparisons:
+  references/RELATED_WORK.md and references/references.bib
+- Exact constants, count identities and numerical diagnostics:
+  verification/README.md
+
+Essential distinctions: memory parameters are fixed and common to both target
+hypotheses; one brightness does not identify loss and noise separately under
+absence; the total idler count is hypothesis neutral, while dark counts alone
+are not; the target phase is not estimated; every measurement outcome is retained
+in the probability bounds. CtoD and CFAR principles are inherited. The claimed
+contribution is the specific unknown-memory conditional reliability theorem,
+paired calibration obstruction and explicit resource consequences. No optimality
+over all quantum receivers or complete-apparatus advantage is asserted.
