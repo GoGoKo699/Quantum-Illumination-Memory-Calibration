@@ -53,6 +53,12 @@ Start with the [connected scientific route](science/README.md), or follow a dire
 | How strong is the classical receiver and transmitter class? | [Classical benchmark](science/classical_benchmark.md) |
 | Which energy, storage, pump and processing comparisons are justified? | [Resource account](science/resources.md) |
 
+## Learn the project
+
+The single educational anchor is Weedbrook et al., [*Gaussian Quantum Information*](https://arxiv.org/abs/1110.3234v1), published in Reviews of Modern Physics in 2012; the linked author manuscript is version 1, submitted 14 October 2011. Its Gaussian states, channels and measurements lead into the [source-to-project bridge](learning/bridge.md), including an exact worked photon-count record.
+
+The [30-milestone map](learning/milestones.md) has 10 background and 20 contribution milestones. It connects Gaussian optics to identifiability, conditional calibration, the full-record reliability proof, the classical benchmark, calibration limits and the physical resource boundary. Start at the [learning entrypoint](learning/README.md).
+
 ## Reproduce the checks
 
 ```bash

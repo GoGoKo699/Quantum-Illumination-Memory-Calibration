@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     checks = []
-    for name in ('certify_constants.py', 'check_count_laws.py', 'check_receiver.py'):
+    for name in ('certify_constants.py', 'check_count_laws.py', 'check_receiver.py', 'check_learning.py'):
         result = subprocess.run([sys.executable, str(ROOT / 'verification' / name)],
                                 cwd=ROOT, text=True, capture_output=True)
         if result.returncode:

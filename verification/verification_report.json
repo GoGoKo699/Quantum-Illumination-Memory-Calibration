@@ -11,14 +11,21 @@
     {
       "program": "check_receiver.py",
       "status": "passed"
+    },
+    {
+      "program": "check_learning.py",
+      "status": "passed"
     }
   ],
   "local_reader_links": "passed",
   "scope": "Exact constants, finite count laws and selected diagnostics; analytical proofs remain authoritative.",
   "source_sha256": {
     ".github/workflows/verify.yml": "e386e8e063d060751ed23e1ff8b1e2b3780d2059a16d90c39644f02f7b413c3c",
-    "README.md": "33bd43d4b4a9293bf4a1b30431ff0212674dce0f15bc24902f45f64063fa0945",
-    "llms.txt": "bc8ee7e2131dcecb4fc124f06d3ed0c6d8637e4f0e50c47a0565bdb538408602",
+    "README.md": "c382dad82df5fa4392f64026f5e1aceee6064068f3f7cd08c635a00258d7d776",
+    "learning/README.md": "5dd8a86a033a5deb099452ca41e9aa3e75f04c2f34a7009822079eb1050e8aaa",
+    "learning/bridge.md": "7ceff895343de5b88c8285719569e830b389becdb88b53a2e5afbc93f15a7cd9",
+    "learning/milestones.md": "abf2a279712934bce1b90d165fa2b6813dcf69d366617ce364f96acaa919162a",
+    "llms.txt": "92cc2396e62177a77623c016d1934631b44b6e52e169f9b76d5e584951992120",
     "references/RELATED_WORK.md": "829bd8a0c0b13a30055bd27bb739bd367a84bbf62ea2dd20cbd0180bd8b97eb5",
     "references/references.bib": "3175914075468f831d824a09af24624bd19d9c3b4f42bf652a02a8cf5f98c268",
     "science/README.md": "d45759edf1bbbabb526703422c6083ab53b9c19038e2fcc14bc3272522e1b1e3",
@@ -28,12 +35,13 @@
     "science/model.md": "1abb64cb9d5662f5653b8ad3d91553f41884c7903bef71fd4ff32af286f878eb",
     "science/processing_robustness.md": "885df75bcbd473e659386bc57ed4268990d40ed26fe0487eed91cecdac0439d0",
     "science/resources.md": "b7de4575eeaed77d121f033eb119d3e631f04148a4be236185c1c8c1430857a9",
-    "verification/README.md": "352f4c460bea5b16c98104441e66504b4bed536aa6e2897b3712e8ecf02e8169",
+    "verification/README.md": "ab800de54730671005d4e47f900733c188d8bde436093634e2431c92bb11ba14",
     "verification/certify_constants.py": "dde4b007a11a276ae5f1cf0b06428b8017fdf28149915cee08237fdf027ee1ec",
     "verification/check_count_laws.py": "7f5d60224559ae74eacf51e71fd42cc6a7e309f7531e8dec286868f09c771853",
+    "verification/check_learning.py": "ff9319b23d77b039abbe8a4e8e7ff875a00588366d4faf0096f563c90f2865c6",
     "verification/check_receiver.py": "7b0321f81b61a47ba3a278259829d097d8c8efdf07a54866812c427ad11788c0",
     "verification/receiver.py": "cafda384c5d63c709e1dc4bcb7ac9b040e812f4779463611a4828ac81461a76f",
-    "verification/run_all.py": "befee338f5ee757d907830b05942be07166136c8f0cb0fb3882ddba9ceaeda58"
+    "verification/run_all.py": "e2e56a63170c53234f55b5428508bbf2fabfc16791c4795ab8cb5cbec397afd4"
   },
   "status": "passed"
 }

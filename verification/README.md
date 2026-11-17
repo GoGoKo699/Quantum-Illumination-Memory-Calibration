@@ -16,6 +16,7 @@ after the suite and that workflow pass at its source tree.
 | `certify_constants.py` | Exact Fraction/Taylor inequalities for the ideal, finite-control, dyadic and fixed-width rate comparisons. Writes `conditional_memory_certificate.json`. |
 | `check_count_laws.py` | Exact finite PGF convolutions, conditional tails and discrete false-alarm inequalities; selected phase-concentration vectors; deterministic finite-parameter probability sums with Chernoff truncation bounds. Writes `count_laws_report.json`. |
 | `check_receiver.py` | Checks the integer detector independently against combinatorial conditional laws and exact false-alarm sums. |
+| `check_learning.py` | Checks exactly 30 ordered milestones, required fields and backward dependencies, the selected anchor/version and the worked count example. |
 | `receiver.py` | Reusable exact dyadic detector taking rational reflectivity and two observed photon-count integers. |
 | `run_all.py` | Runs the scientific checks, validates local reader links and records the checked source hashes in `verification_report.json`. |
 
