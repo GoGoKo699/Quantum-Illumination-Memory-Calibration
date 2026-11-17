@@ -20,7 +20,7 @@ p_\nu(\alpha)&=\frac1{\pi\nu}e^{-|\alpha|^2/\nu}.
 
 Here $`\mathbb E|\alpha|^2=\nu`$. Thus the displacement adds occupation $`\nu`$, and the channel is the usual thermal attenuator with environmental occupation $`\nu/(1-\eta)`$ when $`\eta<1`$. At $`\eta=1`$ it is the additive-noise channel. Equation (L1) specifies the channel on arbitrary inputs, including inputs entangled with a reference; it is not only a statement about coherent probes.
 
-One direct verification uses the Weyl characteristic function $`\chi_\rho(z)=\operatorname{Tr}[\rho D(z)]`$. Vacuum loss sends it to $`\chi_\rho(\sqrt\eta z)e^{-(1-\eta)|z|^2/2}`$, and the Gaussian displacement integral multiplies it by $`e^{-\nu|z|^2}`$. Thus (L1) has characteristic function
+One direct verification uses the Weyl characteristic function $`\chi_\rho(z)=\mathrm{Tr}[\rho D(z)]`$. Vacuum loss sends it to $`\chi_\rho(\sqrt\eta z)e^{-(1-\eta)|z|^2/2}`$, and the Gaussian displacement integral multiplies it by $`e^{-\nu|z|^2}`$. Thus (L1) has characteristic function
 
 ```math
 \chi_{\mathcal L_{\eta,\nu}(\rho)}(z)

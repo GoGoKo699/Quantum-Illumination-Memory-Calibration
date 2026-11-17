@@ -105,14 +105,14 @@ Here $`D=c^2\|z\|^2/V^2`$ and $`\|z\|^2/V`$ has a gamma distribution of shape $`
 
 This integration includes rare small and large return norms. It is not a replacement of the return norm by its expectation.
 
-Let $`\operatorname{Geom}(v)`$ denote the distribution on nonnegative integers of mean $`v`$, with probabilities $`v^k/(1+v)^{k+1}`$. Let $`\operatorname{NB}(r,v)`$ denote the sum of $`r`$ such independent counts. The exact laws are
+Let $`\mathrm{Geom}(v)`$ denote the distribution on nonnegative integers of mean $`v`$, with probabilities $`v^k/(1+v)^{k+1}`$. Let $`\mathrm{NB}(r,v)`$ denote the sum of $`r`$ such independent counts. The exact laws are
 
 ```math
 \begin{array}{c|c|c}
  & K&S\\\hline
-H_0&\operatorname{Geom}(m)&\operatorname{NB}(N-1,m)\\[2pt]
+H_0&\mathrm{Geom}(m)&\mathrm{NB}(N-1,m)\\[2pt]
 H_1&\displaystyle\mathbb E_1[t^K]=\frac{d_e(t)^{N-1}}{d_m(t)^N}
-&\operatorname{NB}(N-1,e).
+&\mathrm{NB}(N-1,e).
 \end{array}
 \qquad K\perp S.
 \tag{D10}
@@ -126,7 +126,7 @@ Equivalently, the joint generating function under presence is
 \tag{D11}
 ```
 
-For an explicitly positive representation of the bright distribution, let $`K_e\sim\operatorname{Geom}(e)`$ and let $`W_1,\ldots,W_N`$ be independent of it. Each $`W_j`$ is zero with probability $`1-A/(1+m)`$ and otherwise is a positive geometric count of mean $`1+m`$. Then
+For an explicitly positive representation of the bright distribution, let $`K_e\sim\mathrm{Geom}(e)`$ and let $`W_1,\ldots,W_N`$ be independent of it. Each $`W_j`$ is zero with probability $`1-A/(1+m)`$ and otherwise is a positive geometric count of mean $`1+m`$. Then
 
 ```math
 K\overset{d}=K_e+\sum_{j=1}^N W_j,
@@ -142,7 +142,7 @@ This representation uses $`0\le A\le m`$ and verifies the positivity of the gene
 Setting $`t=u`$ in (D11) cancels the residual occupation. Under either hypothesis,
 
 ```math
-M=K+S\sim\operatorname{NB}(N,m).
+M=K+S\sim\mathrm{NB}(N,m).
 \tag{D13}
 ```
 
@@ -295,7 +295,7 @@ d(x\Vert y)
 \tag{D27}
 ```
 
-Because $`M\sim\operatorname{NB}(N,m)`$ under presence and $`m\le m_*<\bar m`$, the geometric Chernoff bound yields
+Because $`M\sim\mathrm{NB}(N,m)`$ under presence and $`m\le m_*<\bar m`$, the geometric Chernoff bound yields
 
 ```math
 \Pr_1(M>N\bar m)

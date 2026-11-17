@@ -41,13 +41,13 @@ Then
 a^\dagger a=\frac{q^2+p^2-2}{4}.
 ```
 
-For a zero-mean thermal mode of occupation $`x`$, the covariance is $`(2x+1)I_2`$. The vacuum has covariance $`I_2`$ and occupation zero. A coherent displacement $`\alpha`$ changes the mean to $`(2\operatorname{Re}\alpha,2\operatorname{Im}\alpha)`$ and adds $`|\alpha|^2`$ photons.
+For a zero-mean thermal mode of occupation $`x`$, the covariance is $`(2x+1)I_2`$. The vacuum has covariance $`I_2`$ and occupation zero. A coherent displacement $`\alpha`$ changes the mean to $`(2\mathrm{Re}\alpha,2\mathrm{Im}\alpha)`$ and adds $`|\alpha|^2`$ photons.
 
 | Quantity | Covariance notation used in the bridge | Occupation notation in the project |
 | --- | --- | --- |
 | Thermal mode | $`\Gamma=(2x+1)I_2`$ | $`x`$ photons |
 | Vacuum | $`\Gamma=I_2`$ | $`x=0`$ |
-| Displaced thermal mode | Mean $`(2\operatorname{Re}\alpha,2\operatorname{Im}\alpha)`$, covariance $`(2x+1)I_2`$ | Residual occupation $`x`$, displacement energy $`|\alpha|^2`$ |
+| Displaced thermal mode | Mean $`(2\mathrm{Re}\alpha,2\mathrm{Im}\alpha)`$, covariance $`(2x+1)I_2`$ | Residual occupation $`x`$, displacement energy $`|\alpha|^2`$ |
 | Symmetric EPR variance parameter in source Eq. (42) | Rename it $`v_{\mathrm{EPR}}=2n+1`$ | Pair occupation $`n`$ |
 | Added memory noise here | Adds $`2\nu I_2`$ to quadrature covariance | Adds $`\nu`$ output photons |
 
@@ -57,7 +57,7 @@ If quadratures with commutator $`i`$ are preferred, divide both $`q`$ and $`p`$ 
 
 ## 2. Build the pair, target and memory
 
-Choose the pair's phase convention so its correlation is positive real. With $`Z=\operatorname{diag}(1,-1)`$, its covariance is
+Choose the pair's phase convention so its correlation is positive real. With $`Z=\mathrm{diag}(1,-1)`$, its covariance is
 
 ```math
 \Gamma_{SI}=
@@ -166,19 +166,19 @@ A thermal mode of occupation $`x`$ produces a geometric count,
 \Pr(K=k)=\frac{x^k}{(1+x)^{k+1}},\qquad k=0,1,2,\ldots.
 ```
 
-The sum of $`r`$ independent such counts has a negative-binomial distribution, denoted $`\operatorname{NB}(r,x)`$. Under target absence, all $`N`$ counted idler outputs are independent geometric counts of mean $`m`$.
+The sum of $`r`$ independent such counts has a negative-binomial distribution, denoted $`\mathrm{NB}(r,x)`$. Under target absence, all $`N`$ counted idler outputs are independent geometric counts of mean $`m`$.
 
 Under presence, the bright displacement depends on the random return norm. That norm must be integrated, not replaced by its typical value. Define $`d_x(t)=1+x(1-t)`$. The exact result is
 
 ```math
 \mathbb E_1[t^K]=\frac{d_e(t)^{N-1}}{d_m(t)^N},
-\qquad S\sim\operatorname{NB}(N-1,e),\qquad K\perp S.
+\qquad S\sim\mathrm{NB}(N-1,e),\qquad K\perp S.
 ```
 
 Multiplying the generating functions gives a particularly useful cancellation:
 
 ```math
-M=K+S\sim\operatorname{NB}(N,m)
+M=K+S\sim\mathrm{NB}(N,m)
 \qquad\hbox{under both hypotheses}.
 ```
 
