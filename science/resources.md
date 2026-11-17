@@ -26,25 +26,27 @@ The explicit separate channel-learning experiment uses $`q`$ vacuum probes and $
 
 An ideal multimode photon-number counter can aggregate the dark outputs. The theorem requires photon counting over all $`N`$ output modes, not $`N`$ independent detector instruments or individually retained dark records. Conversely, two count statistics do not mean that only two optical modes are measured.
 
-If $`q=\lceil\sqrt N\rceil`$, total memory calls are $`T_N=N+2q`$ and total prepared photon number, excluding pump inefficiency and local oscillators, is $`2Nn+q`$. The detection exponent per total memory call is unchanged because $`N/T_N\to1`$. The local calibration energy also satisfies $`q/(Nn)\to0`$ for fixed $`n>0`$. These limiting statements do not erase either finite cost or assert exponentially reliable separate estimates.
+If $`q=\lceil\sqrt N\rceil`$, total memory calls are $`T_N=N+2q`$ and total prepared photon number, excluding pump inefficiency and local oscillators, is $`2Nn+q`$. The detection exponent per total memory call is unchanged because $`N/T_N\to1`$. The local calibration energy also satisfies $`q/(Nn)\to0`$ for fixed $`n\gt 0`$. These limiting statements do not erase either finite cost or assert exponentially reliable separate estimates.
 
 ## Source energy and pumps
 
 At frequencies $`\omega_S,\omega_I`$, the two source beams carry energies
 
+**Equation (R1).**
+
 ```math
 E_S=\hbar\omega_S Nn,
 \qquad
 E_I=\hbar\omega_I Nn.
-\tag{R1}
 ```
 
 For ideal three-wave down-conversion, a pump photon at $`\omega_P=\omega_S+\omega_I`$ creates one signal–idler pair. Mean converted source-pump energy is therefore
 
+**Equation (R2).**
+
 ```math
 E_{P,\mathrm{converted}}
 =\hbar(\omega_S+\omega_I)Nn=E_S+E_I.
-\tag{R2}
 ```
 
 The source pump and the two output energies must not be counted twice in the same energy total. Actual incident pump energy is larger and depends on source efficiency, pulse duration, coupling and stabilization. Neither a TMSV occupation nor a squeezing parameter alone determines its wall-plug cost. Preparing the local thermal calibration probes has its own source and mean optical energy $`\hbar\omega_I q`$.
@@ -71,11 +73,12 @@ The optical weights require $`O(N)`$ norms and two-mode mixing parameters in a r
 
 The count decision itself uses two integers. One can evaluate its binomial ratio using exact integer arithmetic:
 
+**Equation (R3).**
+
 ```math
 p_N(K,M)
 =\frac{\binom{M-K+N-1}{N-1}}
 {\binom{M+N-1}{N-1}}.
-\tag{R3}
 ```
 
 For the [dyadic decision variant](processing_robustness.md#an-exact-integer-decision-with-a-dyadic-cutoff), cross-multiply these integers against $`2^{\lceil N\kappa/13400\rceil}`$. The [reference implementation](../verification/receiver.py) uses this exact comparison. No logarithm or approximate threshold comparison is needed by the actual decision. The [reference implementation](../verification/receiver.py) cancels the binomial ratio into $`K`$ rational-product updates. Reduced integer operands have at most $`O(N+M+j_N)`$ bits, since the unreduced binomial coefficients are bounded by $`2^{N+M-1}`$. Thus each record has finite polynomial arithmetic cost; the negative-binomial total has mean $`Nm`$ and finite moments, giving finite expected bit storage and processing at fixed $`N`$. Photon counts are unbounded, so no deterministic finite register size holds for every record without an additional overflow rule. At bounded $`m`$, their mean total is $`Nm`$ and their generating function gives explicit exponential tails; expected bit storage and processing are finite. A physical implementation that truncates counts must charge and bound its overflow event on the same scale as detection. The theorem itself retains every count and does not silently discard an overflow record.
@@ -86,8 +89,8 @@ Aggregating repeated fixed-width blocks requires only a running count of positiv
 
 The strong benchmark is a fixed classical mixture of coherent signals under the same total mean transmitted signal-photon budget. It can retain its preparation label, know the true target phase and use arbitrary global quantum reception. Its optimal symmetric-error exponent is $`\kappa nC_B`$ per mean-$`n`$ signal mode, with $`C_B=(\sqrt{B+1}-\sqrt B)^2`$. The result is not a comparison only with classical noise radar, heterodyne-only reception or a particular receiver circuit.
 
-The ideal collective conditional detector certifies a $`>2.2`$ transmitted-energy factor. Its finite-range, finite-control variant with exact dyadic decisions certifies $`>2.17`$. At equal frequencies, charging both source beams doubles the prepared-photon budget. The latter collective mathematical limit therefore retains a factor $`>1.085`$ against the **receiver-cost-relaxed** coherent benchmark given the same source output energy, with sublinear local calibration energy included asymptotically. This is a source preparation-energy comparison. It excludes incident-pump inefficiency, local oscillators, storage, control, detectors, cooling and processing, and hence does not establish complete-apparatus superiority.
+The ideal collective conditional detector certifies a $`\gt 2.2`$ transmitted-energy factor. Its finite-range, finite-control variant with exact dyadic decisions certifies $`\gt 2.17`$. At equal frequencies, charging both source beams doubles the prepared-photon budget. The latter collective mathematical limit therefore retains a factor $`\gt 1.085`$ against the **receiver-cost-relaxed** coherent benchmark given the same source output energy, with sublinear local calibration energy included asymptotically. This is a source preparation-energy comparison. It excludes incident-pump inefficiency, local oscillators, storage, control, detectors, cooling and processing, and hence does not establish complete-apparatus superiority.
 
-For unequal frequencies, a transmitted-energy factor $`r`$ becomes $`r\omega_S/(\omega_S+\omega_I)`$ under this source-output-energy normalization. A high-frequency idler can remove that advantage. The fixed-width construction certifies only a $`>1.05`$ transmitted-energy factor and consequently does not certify an improvement when equal-frequency source idlers are charged.
+For unequal frequencies, a transmitted-energy factor $`r`$ becomes $`r\omega_S/(\omega_S+\omega_I)`$ under this source-output-energy normalization. A high-frequency idler can remove that advantage. The fixed-width construction certifies only a $`\gt 1.05`$ transmitted-energy factor and consequently does not certify an improvement when equal-frequency source idlers are charged.
 
 The strongest supported practical conclusion is therefore conditional: quantum illumination can retain a strict detection-reliability advantage with unknown, bounded full-window Gaussian memory noise and explicitly counted calibration and measurement resources. Whether an actual apparatus offers a better energy, time, size or monetary tradeoff requires a matched hardware model and measured parameters. No such apparatus crossover is claimed here.

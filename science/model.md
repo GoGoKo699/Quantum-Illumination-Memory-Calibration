@@ -6,24 +6,26 @@ The target detector does not assume that the idler memory has been calibrated su
 
 ## Target and source
 
-There are $`N`$ independently prepared signal–idler pairs. Each pair is a two-mode squeezed vacuum of known mean occupation $`n>0`$ in each mode,
+There are $`N`$ independently prepared signal–idler pairs. Each pair is a two-mode squeezed vacuum of known mean occupation $`n\gt 0`$ in each mode,
+
+**Equation (M1).**
 
 ```math
 |\psi_n\rangle_{SI}
 =\frac1{\sqrt{n+1}}\sum_{j=0}^{\infty}
 \left(\frac n{n+1}\right)^{j/2}|j\rangle_S|j\rangle_I.
-\tag{M1}
 ```
 
 The source has a common phase convention across the block, so that $`\langle a_Sa_I\rangle=\sqrt{n(n+1)}`$. This phase coherence is needed by the collective idler combiner.
 
-Fix a known background occupation $`B>0`$ and a known power reflectivity $`0<\kappa<1`$. Under target absence, the returned mode is an independent thermal state $`\tau_B`$. Under target presence,
+Fix a known background occupation $`B\gt 0`$ and a known power reflectivity $`0\lt \kappa\lt 1`$. Under target absence, the returned mode is an independent thermal state $`\tau_B`$. Under target presence,
+
+**Equation (M2).**
 
 ```math
 a_R=e^{i\theta}\sqrt\kappa\,a_S+\sqrt{1-\kappa}\,a_E,
 \qquad
 \langle a_E^\dagger a_E\rangle=\frac B{1-\kappa}.
-\tag{M2}
 ```
 
 The phase $`\theta\in[0,2\pi)`$ is unknown and constant throughout the block. The target environments are independent across pairs and independent of the source and memory environments. Consequently the returned occupation is $`B+\kappa n`$ under presence. Vacuum illumination gives the same return under either hypothesis: a changed background is not supplied as an additional target signature.
@@ -34,75 +36,82 @@ The transmitter is fixed before target interaction. Receiver feedforward does no
 
 Each idler passes through the same phase-insensitive Gaussian channel
 
+**Equation (M3).**
+
 ```math
 \mathcal L_{\eta,\nu}=\mathcal A_\nu\circ\mathcal L_{\eta,0},
 \qquad
 \mathcal A_\nu(\rho)=\int_{\mathbb C}
 \frac{e^{-|a|^2/\nu}}{\pi\nu}
 D(a)\rho D(a)^\dagger\,d^2a.
-\tag{M3}
 ```
 
 Here $`\mathcal L_{\eta,0}`$ is attenuation into vacuum with power transmissivity $`\eta`$, and $`\mathcal A_\nu`$ adds independent circular Gaussian displacement noise of variance $`\nu`$. At $`\nu=0`$, the second channel is the identity. This definition is physical also at $`\eta=1`$ and positive $`\nu`$. It maps a thermal input of occupation $`x`$ to a thermal output of occupation $`\eta x+\nu`$.
 
 The unknown values lie in declared bounds
 
+**Equation (M4).**
+
 ```math
-0<\eta_-\le\eta\le\eta_+\le1,
+0\lt \eta_-\le\eta\le\eta_+\le1,
 \qquad
-0\le\nu_-\le\nu\le\nu_+<\infty.
-\tag{M4}
+0\le\nu_-\le\nu\le\nu_+\lt \infty.
 ```
 
 They are fixed across the experiment and are common to the two target hypotheses. Each call has an independent environment. This is stationary independent memory noise, not a parameter redrawn on every use. The parameter $`\nu`$ is output-referred added occupation; it is not the occupation of an attenuator's environmental input.
 
 Define
 
+**Equation (M5).**
+
 ```math
 m=\eta n+\nu,
 \qquad V=B+\kappa n+1,
 \qquad A=\frac{\eta\kappa n(n+1)}V,
 \qquad e=m-A.
-\tag{M5}
 ```
 
 The received idler has occupation $`m`$ under either hypothesis. Its correlation with a return is zero under absence and
 
+**Equation (M6).**
+
 ```math
 \langle a_Ra_{I,\mathrm{out}}\rangle
 =e^{i\theta}\sqrt{\eta\kappa n(n+1)}
-\tag{M6}
 ```
 
 under presence. The residual conditional occupation $`e`$ is nonnegative. Indeed,
 
+**Equation (M7).**
+
 ```math
 \frac A{\eta n}
-=\frac{\kappa(n+1)}{B+\kappa n+1}<1,
-\tag{M7}
+=\frac{\kappa(n+1)}{B+\kappa n+1}\lt 1,
 ```
 
-because $`\kappa<B+1`$. With the strict assumptions above, $`e>0`$.
+because $`\kappa\lt B+1`$. With the strict assumptions above, $`e\gt 0`$.
 
 ## Identifiability before choosing calibration
 
 Ordinary target-detection pairs at one source brightness cannot identify $`\eta`$ and $`\nu`$ separately under target absence. Their complete return–idler state is
 
+**Equation (M8).**
+
 ```math
 \rho_{0,\eta,\nu}^{(N)}
 =(\tau_B\otimes\tau_m)^{\otimes N}.
-\tag{M8}
 ```
 
 Whenever two admissible memory pairs have the same $`m=\eta n+\nu`$, these states are identical. No measurement, including a collective quantum measurement, can distinguish those memory pairs from such data. This is an exact identifiability failure, rather than a poor choice of estimator. Correlations under target presence can provide additional information, but do not resolve the failure uniformly over the two hypotheses.
 
 Separate full-channel learning needs a second known input brightness or another independently justified probe. One explicit option uses $`q`$ vacuum probes and $`q`$ independent thermal probes of occupation one. They pass through the same memory channel for the same specified storage window. Their output photon-count means are respectively $`\nu`$ and $`\eta+\nu`$. If $`Z_0,Z_1`$ are the two sample means, use
 
+**Equation (M9).**
+
 ```math
 \widehat\nu=\Pi_{[\nu_-,\nu_+]}(Z_0),
 \qquad
 \widehat\eta=\Pi_{[\eta_-,\eta_+]}(Z_1-Z_0),
-\tag{M9}
 ```
 
 where $`\Pi`$ denotes clipping to an interval. The law of large numbers proves consistency as $`q\to\infty`$. On a compact parameter box, geometric-count variances are uniformly bounded, so Chebyshev's inequality also gives uniform consistency. This does not make fixed-accuracy failures exponentially negligible on the $`N`$-trial detection scale when $`q=o(N)`$.
@@ -113,21 +122,23 @@ These probes are local: they do not interrogate the target, and they do not reve
 
 Heterodyne every returned mode, obtaining $`z=(z_1,\ldots,z_N)\in\mathbb C^N`$. Retain the idlers coherently. Apply a passive $`N`$-mode transformation whose first row is
 
+**Equation (M10).**
+
 ```math
-w_j=\frac{z_j}{\|z\|}.
-\tag{M10}
+w_j=\frac{z_j}{\Vert z\Vert}.
 ```
 
 Choose any orthonormal completion of that row. At the probability-zero event $`z=0`$, declare one fixed unitary. This is a complete receiver policy: its weights depend on recorded heterodyne outcomes and do not require $`\eta,\nu`$ or $`\theta`$.
 
 The first output is the bright output; photon-count it to obtain $`K`$. Count all other outputs and let $`S`$ be their total count. Write $`M=K+S`$. The final decision uses the exact conditional-null tail
 
+**Equation (M11).**
+
 ```math
 p_N(K,M)
 =\frac{\binom{M-K+N-1}{N-1}}
 {\binom{M+N-1}{N-1}},
 \qquad N\ge2.
-\tag{M11}
 ```
 
 The [detection proof](conditional_detection.md) derives the state reduction, the joint count law and a threshold with an explicit finite-sample error guarantee. No common-phase estimate is formed. Photon-number statistics are independent of that phase exactly.

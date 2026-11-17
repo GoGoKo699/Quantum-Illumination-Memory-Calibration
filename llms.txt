@@ -7,6 +7,11 @@ Read README.md for the supported results and scope. Follow science/README.md
 for the connected scientific account.
 
 Routes:
+- Learning entrypoint: learning/README.md
+- Selected Weedbrook (RMP2012/arXiv1110.3234v1) bridge and worked count record:
+  learning/bridge.md
+- Exactly 30 project-defined milestones, with 10 background and 20 contribution
+  targets: learning/milestones.md
 - Model, common nuisance parameters and early identifiability: science/model.md
 - Optical conditional state, exact count law, total-photon reference, finite-N
   detector and strong-classical separation: science/conditional_detection.md
