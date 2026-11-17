@@ -29,7 +29,7 @@ R_N=\sup_{\lambda,\theta}
 
 The upper bound also holds if the two errors are maximized separately, since both will be bounded uniformly. No parameter is switched between the hypotheses within a physical experiment.
 
-The optical policy heterodynes all returns, concentrates the conditional idler displacement into one output with the recorded weights $`z_j/\Vertz\Vert`$, and photon-counts that output and all orthogonal outputs. Let $`K`$ be the bright count, $`S`$ the sum of orthogonal-output counts and $`M=K+S`$.
+The optical policy heterodynes all returns, concentrates the conditional idler displacement into one output with the recorded weights $`z_j/\Vert z\Vert`$, and photon-counts that output and all orthogonal outputs. Let $`K`$ be the bright count, $`S`$ the sum of orthogonal-output counts and $`M=K+S`$.
 
 Define
 
@@ -53,7 +53,7 @@ Under target presence, the return heterodyne vector has density
 **Equation (D4).**
 
 ```math
-f_1(z)=\frac{e^{-\Vertz\Vert^2/V}}{(\pi V)^N}.
+f_1(z)=\frac{e^{-\Vert z\Vert^2/V}}{(\pi V)^N}.
 ```
 
 Put $`c=\sqrt{\eta\kappa n(n+1)}`$. Gaussian conditioning leaves the idlers in a product of displaced thermal states with occupation $`e=m-c^2/V`$ and displacements
@@ -66,12 +66,12 @@ d_j=e^{i\theta}\frac{c z_j^*}{V}.
 
 For example, the heterodyne covariance adds one vacuum unit to the return occupation, giving the Schur-complement subtraction $`c^2/(B+\kappa n+1)`$ in the idler occupation. This is the noisy-memory version of the conditional state used in [Chen and Zhuang, Section III](https://arxiv.org/html/2212.08190v1). Correlation-to-displacement conversion and unknown-phase bright-output counting are inherited receiver ingredients.
 
-A passive transformation with first row $`z_j/\Vertz\Vert`$ takes the displacement vector to
+A passive transformation with first row $`z_j/\Vert z\Vert`$ takes the displacement vector to
 
 **Equation (D6).**
 
 ```math
-\left(e^{i\theta}\frac{c\Vertz\Vert}{V},0,\ldots,0\right).
+\left(e^{i\theta}\frac{c\Vert z\Vert}{V},0,\ldots,0\right).
 ```
 
 The conditional thermal covariance is proportional to the identity, so the transformation leaves it a product of identical thermal covariances. Thus, conditioned on $`z`$, the orthogonal outputs are mutually independent thermal states of occupation $`e`$ and are independent of the bright output. Their conditional law does not depend on $`z`$, which also proves unconditional independence of $`K`$ and $`S`$ after the return record is integrated.
@@ -99,7 +99,7 @@ F_{e,D}(t)=\frac1{d_e(t)}
 
 One derivation integrates the coherent-state photon generating function against the thermal state's circular Gaussian displacement density. The formula extends continuously to $`e=0`$.
 
-Here $`D=c^2\Vertz\Vert^2/V^2`$ and $`\Vertz\Vert^2/V`$ has a gamma distribution of shape $`N`$ and unit scale. Its exact Laplace transform gives
+Here $`D=c^2\Vert z\Vert^2/V^2`$ and $`\Vert z\Vert^2/V`$ has a gamma distribution of shape $`N`$ and unit scale. Its exact Laplace transform gives
 
 **Equation (D9).**
 

@@ -145,11 +145,11 @@ The crucial structure is shared across all pairs: the displacement vector is one
 
 ## 4. Concentrate the correlation and retain the other outputs
 
-For $`z=(z_1,\ldots,z_N)\ne0`$, choose a passive combiner with first row $`w_j=z_j/\Vertz\Vert`$. Its first displacement is
+For $`z=(z_1,\ldots,z_N)\ne0`$, choose a passive combiner with first row $`w_j=z_j/\Vert z\Vert`$. Its first displacement is
 
 ```math
 \sum_{j=1}^N w_jd_j
-=e^{i\theta}\frac{c\Vertz\Vert}{V}.
+=e^{i\theta}\frac{c\Vert z\Vert}{V}.
 ```
 
 All orthogonal outputs have zero displacement in the ideal construction. Because every conditional thermal covariance is the same, passive mixing leaves a product thermal covariance. There is one displaced thermal bright output and $`N-1`$ undisplaced thermal outputs of residual occupation $`e`$.

@@ -125,7 +125,7 @@ Heterodyne every returned mode, obtaining $`z=(z_1,\ldots,z_N)\in\mathbb C^N`$. 
 **Equation (M10).**
 
 ```math
-w_j=\frac{z_j}{\Vertz\Vert}.
+w_j=\frac{z_j}{\Vert z\Vert}.
 ```
 
 Choose any orthonormal completion of that row. At the probability-zero event $`z=0`$, declare one fixed unitary. This is a complete receiver policy: its weights depend on recorded heterodyne outcomes and do not require $`\eta,\nu`$ or $`\theta`$.

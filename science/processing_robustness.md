@@ -15,7 +15,7 @@ Let $`\mathcal L_{\eta,\nu}`$ be the phase-insensitive channel in the [model](mo
 =U\mathcal L_{\eta,\nu}^{\otimes N}(\rho)U^\dagger.
 ```
 
-To verify this, apply the multimode Weyl characteristic function. Uniform attenuation replaces its argument by $`\sqrt\eta z`$ and multiplies it by a circular factor depending only on $`\Vertz\Vert^2`$. A passive unitary rotates $`z`$ without changing that norm. The two operations therefore commute. Equivalently, identical vacuum-loss environments and an independent circular Gaussian displacement vector are invariant under the same passive rotation.
+To verify this, apply the multimode Weyl characteristic function. Uniform attenuation replaces its argument by $`\sqrt\eta z`$ and multiplies it by a circular factor depending only on $`\Vert z\Vert^2`$. A passive unitary rotates $`z`$ without changing that norm. The two operations therefore commute. Equivalently, identical vacuum-loss environments and an independent circular Gaussian displacement vector are invariant under the same passive rotation.
 
 This identity holds separately for every recorded return vector $`z`$. Thus it also holds for the record-controlled transformation $`U(z)`$, even though $`z`$ is correlated with the conditional idler state. Moving an idler channel does not alter the distribution of a measurement already made on the returns.
 
@@ -57,12 +57,12 @@ Let $`w(z)`$ be the normalized first row actually implemented. For $`z\ne0`$, de
 
 ```math
 \gamma(z)
-=\frac{\left|\sum_{j=1}^N w_j(z)z_j^*\right|^2}{\Vertz\Vert^2}.
+=\frac{\left|\sum_{j=1}^N w_j(z)z_j^*\right|^2}{\Vert z\Vert^2}.
 ```
 
 First suppose a deterministic guarantee $`\gamma(z)\ge\gamma_0\gt 0`$ holds for every nonzero record. The finite-range construction below instead proves it on a specified event and charges its complement. The choice at $`z=0`$ is arbitrary and has zero displacement under either hypothesis.
 
-Under presence, conditional covariance remains $`eI`$ after any passive transformation. The bright displacement energy is at least $`\gamma_0 A\Vertz\Vert^2/V`$, using the [model's](model.md) $`A,e,V`$. Put $`u=1-t`$ for $`0\lt t\lt 1`$. Conditional photon-count generating functions and the exact Gamma law of $`\Vertz\Vert^2/V`$ give
+Under presence, conditional covariance remains $`eI`$ after any passive transformation. The bright displacement energy is at least $`\gamma_0 A\Vert z\Vert^2/V`$, using the [model's](model.md) $`A,e,V`$. Put $`u=1-t`$ for $`0\lt t\lt 1`$. Conditional photon-count generating functions and the exact Gamma law of $`\Vert z\Vert^2/V`$ give
 
 **Equation (P5).**
 
@@ -153,7 +153,7 @@ Under either hypothesis, return variance is between $`v_-=11`$ and $`v_+=11.0001
 
 ```math
 \mathcal G_N=
-\left\{\frac{Nv_-}{2}\le\Vertz\Vert^2\le2Nv_+\right\}.
+\left\{\frac{Nv_-}{2}\le\Vert z\Vert^2\le2Nv_+\right\}.
 ```
 
 The normalized squared return norm has a Gamma distribution of shape $`N`$. The exponential-sum Chernoff bounds at $`1/2`$ and $`2`$ give
@@ -174,7 +174,7 @@ Use a uniform real-coordinate grid of spacing $`h=10^{-3}`$. Put $`R=\sqrt{2Nv_+
 
 ```math
 \varepsilon
-=\frac{\Vertz-\widetilde z\Vert}{\Vertz\Vert}
+=\frac{\Vert z-\widetilde z\Vert}{\Vert z\Vert}
 \le\frac{h\sqrt{N/2}}{\sqrt{Nv_-/2}}
 =\frac h{\sqrt{v_-}}\lt 10^{-3}.
 ```
