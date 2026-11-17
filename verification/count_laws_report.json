@@ -1,0 +1,64 @@
+{
+  "exact_count_laws": {
+    "exact_conditional_survival_probabilities_checked": 1300,
+    "exact_discrete_superuniformity_inequalities_checked": 3206,
+    "exact_pgf_convolution_coefficients_checked": 300,
+    "largest_total_photon_number_checked": 24
+  },
+  "finite_probability_diagnostics": {
+    "cases": [
+      {
+        "added_noise": 0.0,
+        "chernoff_truncation_bound": 2.6523989134770502e-61,
+        "eta": 0.9,
+        "false_alarm": 0.0008991907284325916,
+        "miss_probability": 0.00027922682014466164,
+        "symmetric_risk": 0.0005892087742886266
+      },
+      {
+        "added_noise": 0.001,
+        "chernoff_truncation_bound": 8.300720535410557e-60,
+        "eta": 0.9,
+        "false_alarm": 0.0018963968459502951,
+        "miss_probability": 0.00028123564927297557,
+        "symmetric_risk": 0.0010888162476116355
+      },
+      {
+        "added_noise": 0.0,
+        "chernoff_truncation_bound": 4.6420947228277834e-61,
+        "eta": 1.0,
+        "false_alarm": 0.0009990009989450717,
+        "miss_probability": 0.0001125786827786466,
+        "symmetric_risk": 0.0005557898408618592
+      },
+      {
+        "added_noise": 0.001,
+        "chernoff_truncation_bound": 1.0625182965787741e-59,
+        "eta": 1.0,
+        "false_alarm": 0.0019960079839620054,
+        "miss_probability": 0.00011349135104525664,
+        "symmetric_risk": 0.001054749667503631
+      },
+      {
+        "added_noise": 0.0005,
+        "chernoff_truncation_bound": 3.3421317212429004e-60,
+        "eta": 0.95,
+        "false_alarm": 0.0014479005442355418,
+        "miss_probability": 0.00017797241347998615,
+        "symmetric_risk": 0.000812936478857764
+      }
+    ],
+    "floating_point_comparison_tolerance": 1e-10,
+    "method": "deterministic count-law sums; double precision; not Monte Carlo",
+    "modes": 1000000,
+    "reflectivity": 0.1,
+    "uniform_false_alarm_bound": 0.00526023205888715,
+    "uniform_rate": 5.24758013554652e-06,
+    "uniform_symmetric_risk_bound": 0.007890348088330725
+  },
+  "phase_concentration": {
+    "deterministic_static_phase_concentration_checks": 15
+  },
+  "scope": "Finite identities and selected parameter cases support, but do not prove, the all-parameter theorem.",
+  "status": "passed"
+}

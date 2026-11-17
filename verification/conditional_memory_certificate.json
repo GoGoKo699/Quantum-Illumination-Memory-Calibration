@@ -1,0 +1,26 @@
+{
+  "claim": "R_N <= (3/2) exp(-N*r), r > (11/5)*kappa*n*C_B",
+  "N_min": 20,
+  "parameters": {
+    "n": "1/1000",
+    "B": "10",
+    "eta": "[9/10,1]",
+    "nu": "[0,1/1000]",
+    "kappa": "(0,1/10]"
+  },
+  "constants": {
+    "s": "2",
+    "u_lower": "4323/5000",
+    "L_lower": "144/25",
+    "total_photon_cutoff": "3/1000"
+  },
+  "ratio_lower_exact": "19617520706784/8907123109777",
+  "capture_power_lower_exact": "996002004001/1002001000000",
+  "capture_099_rate_ratio_lower": "485533637492904/222678077744425",
+  "dyadic_rate_ratio_lower": "3636171/1675000",
+  "finite_width_rate_ratio_lower": "2107/2000",
+  "ratio_lower_decimal_for_orientation": 2.202453077722774,
+  "cutoff_tail_rate_lower": "1/6018",
+  "method": "Exact rational Taylor bounds for exponentials; rational square check; monotone inequalities.",
+  "scope": "The algebraic constant certificate depends on the separate exact conditional-count theorem; it does not certify apparatus realism or optimality."
+}
