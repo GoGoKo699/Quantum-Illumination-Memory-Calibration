@@ -47,7 +47,7 @@ For a zero-mean thermal mode of occupation $`x`$, the covariance is $`(2x+1)I_2`
 | --- | --- | --- |
 | Thermal mode | $`\Gamma=(2x+1)I_2`$ | $`x`$ photons |
 | Vacuum | $`\Gamma=I_2`$ | $`x=0`$ |
-| Displaced thermal mode | Mean $`(2\mathrm{Re}\alpha,2\mathrm{Im}\alpha)`$, covariance $`(2x+1)I_2`$ | Residual occupation $`x`$, displacement energy $`|\alpha|^2`$ |
+| Displaced thermal mode | Mean $`(2\mathrm{Re}\alpha,2\mathrm{Im}\alpha)`$, covariance $`(2x+1)I_2`$ | Residual occupation $`x`$, displacement energy $`\lvert\alpha\rvert^2`$ |
 | Symmetric EPR variance parameter in source Eq. (42) | Rename it $`v_{\mathrm{EPR}}=2n+1`$ | Pair occupation $`n`$ |
 | Added memory noise here | Adds $`2\nu I_2`$ to quadrature covariance | Adds $`\nu`$ output photons |
 
