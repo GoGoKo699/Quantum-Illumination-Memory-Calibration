@@ -254,7 +254,7 @@ The single educational anchor is **Weedbrook et al., “Gaussian Quantum Informa
 
 **Central question:** Why can arbitrary calibration photon energy fail to replace a sufficient number of memory calls?
 
-**Understanding target:** Explain the overlap of two positive Gaussian displacement densities as a shared completely positive channel component. Follow its all-common branch through arbitrary adaptive calibration and retained quantum registers to the energy-independent trace-distance and certification bounds.
+**Understanding target:** At fixed attenuation, explain the overlap of two positive Gaussian displacement densities as a shared completely positive channel component. Follow its all-common branch through arbitrary adaptive calibration and retained quantum registers to the energy-independent trace-distance and certification bounds.
 
 **Dependencies and story role:** M04, M08, M10, M12. Introduces the obstruction's information-theoretic ingredient independently of the chosen target measurement.
 
@@ -302,7 +302,7 @@ The single educational anchor is **Weedbrook et al., “Gaussian Quantum Informa
 
 **Central question:** What survives if the commanded combiner captures only part of the intended displacement?
 
-**Understanding target:** Explain exact null invariance for every passive control law and a captured-fraction bound for detection power. Use conservation of the total count when imperfect concentration destroys the ideal bright–dark independence after averaging.
+**Understanding target:** Explain exact null invariance for passive control laws selected from return records or independent calibration records, and a captured-fraction bound for detection power. Use conservation of the total count when imperfect concentration destroys the ideal bright–dark independence after averaging; selecting a favorable payload-idler measurement outcome is outside this claim.
 
 **Dependencies and story role:** M06, M15–M17, M24. Identifies the symmetry that makes controlled imperfections analyzable.
 
